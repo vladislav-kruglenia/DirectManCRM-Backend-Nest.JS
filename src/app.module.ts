@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
 import { AuthModule } from './Modules/Auth/auth.module';
 import { MongooseModule } from '@nestjs/mongoose';
-import { AuthUsersModule } from './Modules/Authentification(no use)/AuthUser/AuthUsers.module';
-import { UsersModule } from './Modules/Authentification(no use)/Users/Users.module';
+import { AuthUsersModule } from './Modules/UnusedModules/Authentification(no use)/AuthUser/AuthUsers.module';
+import { UsersModule } from './Modules/UnusedModules/Authentification(no use)/Users/Users.module';
 import { AppController } from './app.controller';
 import { TariffsEditingModule } from './Modules/TariffsEditing/TariffsEditing.module';
 import { GraphQLModule } from '@nestjs/graphql';
-import { AuthorModule } from './Modules/Authors/Author.module';
-
+import { AuthorModule } from './Modules/UnusedModules/Authors(no use)/Author.module';
+import { BriefsModule } from './Modules/Briefs/Briefs.module';
 
 
 @Module({
@@ -17,6 +17,7 @@ import { AuthorModule } from './Modules/Authors/Author.module';
     UsersModule,
     TariffsEditingModule,
     AuthorModule,
+    BriefsModule,
     GraphQLModule.forRoot({
       installSubscriptionHandlers: true,
       autoSchemaFile: 'src/GraphQL/schema.graphql'

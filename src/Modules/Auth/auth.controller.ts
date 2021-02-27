@@ -3,7 +3,7 @@ import { AuthProvider } from './Providers/auth.provider';
 import { LoginDto } from './DTO/Login.dto';
 import { LogoutDto } from './DTO/Logout.dto';
 import { Response } from 'express';
-import { Cookies } from '../../Decorators/CookieDecorator';
+import { Cookies } from '../../Global/GlobalDecorators/CookieDecorator';
 
 
 @Controller()

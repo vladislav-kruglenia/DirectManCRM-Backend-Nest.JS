@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Order, OrderDocument } from './Shemas/Orders.shema';
 import { Model } from 'mongoose';
 import { SaveOrderInfoDto } from './DTO/SaveOrderInfoDto.types';
-import { Tariffs_Info, TariffsInfoDocument } from './Shemas/TariffsInfo.shema';
+import { Tariffs_Info, TariffsInfoDocument } from './Shemas/TariffsInfo.schema';
 import { EditTariffsInfoDto, TariffInfoID } from './DTO/EditTariffsInfoDto.types';
 
 @Injectable()

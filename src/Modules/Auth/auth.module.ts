@@ -5,8 +5,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { User, UserSchema } from './Shemas/user.shema';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
-import { jwtConstants } from '../Authentification(no use)/AuthUser/constants';
-import { JwtStrategy } from '../Authentification(no use)/AuthUser/Strategyes/jwt.strategy';
+import { jwtConstants } from '../UnusedModules/Authentification(no use)/AuthUser/constants';
+import { JwtStrategy } from '../UnusedModules/Authentification(no use)/AuthUser/Strategyes/jwt.strategy';
 import { TokensProvider } from './Providers/tokens.provider';
 
 

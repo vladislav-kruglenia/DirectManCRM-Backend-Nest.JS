@@ -1,4 +1,4 @@
-import { Direction } from '../Shemas/TariffsInfo.shema';
+import { Direction } from '../Shemas/TariffsInfo.schema';
 
 export type EditTariffsInfoDto = {
   directionsAndTariffs: Array<Direction>

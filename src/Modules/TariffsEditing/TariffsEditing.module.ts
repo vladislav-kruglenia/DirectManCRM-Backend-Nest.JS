@@ -3,7 +3,7 @@ import { TariffsEditingController } from './TariffsEditing.controller';
 import { TariffsEditingProvider } from './TariffsEditing.provider';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Order, OrderSchema } from './Shemas/Orders.shema';
-import { Tariffs_Info, TariffsInfoSchema } from './Shemas/TariffsInfo.shema';
+import { Tariffs_Info, TariffsInfoSchema } from './Shemas/TariffsInfo.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([
