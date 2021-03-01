@@ -15,8 +15,64 @@ type Post {
   votes: Int
 }
 
+type MainProjectData {
+  projectId: String!
+  projectName: String!
+  projectStatus: String!
+  deadline: String!
+}
+
+type ClientAccountInfoModel {
+  userId: String!
+  projectsInProgress: [MainProjectData!]!
+  managedProjects: [MainProjectData!]!
+  frozenProjects: [MainProjectData!]!
+  completedProjects: [MainProjectData!]!
+}
+
+type Comment {
+  commentText: String!
+  commentDate: String!
+  authorId: String!
+  authorLogin: String!
+}
+
+type Debt {
+  isExists: Boolean!
+  amountDebt: Float
+  debtPercentage: Float
+}
+
+type OrderedService {
+  isReady: Boolean!
+  serviceName: String!
+}
+
+type ProjectStage {
+  isActive: Boolean!
+  stage: String!
+}
+
+type ProjectData {
+  projectStages: [ProjectStage!]!
+  dept: Debt!
+  orderedServices: [OrderedService!]!
+  briefId: String!
+  comments: [Comment!]!
+}
+
+type ProjectInfoForClientModel {
+  projectId: String!
+  projectName: String!
+  projectStatus: String!
+  deadline: String!
+  projectData: ProjectData!
+}
+
 type Query {
   getAuthor(id: Int!): Author!
+  getClientAccountInfo(userId: String!): ClientAccountInfoModel!
+  getProjectInfoForClient(projectId: String!): ProjectInfoForClientModel!
 }
 
 type Mutation {

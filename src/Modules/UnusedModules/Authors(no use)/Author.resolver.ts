@@ -3,6 +3,7 @@ import { Author, Post } from './Author.model';
 import { AuthorService } from './Author.service';
 import { UpvotePostInput } from './InputsTypes/Author.input';
 import { PubSub } from 'graphql-subscriptions';
+
 const pubSub = new PubSub();
 
 @Resolver(of => Author)
@@ -37,4 +38,5 @@ export class AuthorsResolver {
   isUpdatePostTitleSub() {
     return pubSub.asyncIterator('postTitleUpdated');
   }
+
 }

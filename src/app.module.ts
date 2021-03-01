@@ -8,6 +8,7 @@ import { TariffsEditingModule } from './Modules/TariffsEditing/TariffsEditing.mo
 import { GraphQLModule } from '@nestjs/graphql';
 import { AuthorModule } from './Modules/UnusedModules/Authors(no use)/Author.module';
 import { BriefsModule } from './Modules/Briefs/Briefs.module';
+import { PersonalAccountsModule } from './Modules/PersonalAccounts/PersonalAccounts.module';
 
 
 @Module({
@@ -18,6 +19,7 @@ import { BriefsModule } from './Modules/Briefs/Briefs.module';
     TariffsEditingModule,
     AuthorModule,
     BriefsModule,
+    PersonalAccountsModule,
     GraphQLModule.forRoot({
       installSubscriptionHandlers: true,
       autoSchemaFile: 'src/GraphQL/schema.graphql'
